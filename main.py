@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 
 st.set_page_config(page_title="Customer Churn Prediction", layout="centered")
 
-st.title("📊 Customer Churn Prediction App")
+st.title(" Customer Churn Prediction App")
 st.markdown("_WELCOME TO MOHAMED IBRAHIM'S PROJECT_")
 st.write("Machine Learning project using Streamlit")
 
@@ -58,12 +58,12 @@ for col in categorical_cols:
 
 input_array = np.array(list(input_data.values())).reshape(1, -1)
 
-if st.button("🔍 Predict Churn"):
+if st.button(" Predict Churn"):
     prediction = model.predict(input_array)[0]
     probability = model.predict_proba(input_array)[0][1]
 
     if prediction == 1:
-        st.error(f"⚠️ Customer is likely to CHURN (Probability: {probability:.2%})")
+        st.error(f" Customer is likely to CHURN (Probability: {probability:.2%})")
     else:
         st.success(f"✅ Customer is NOT likely to churn (Probability: {probability:.2%})")
 
